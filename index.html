@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="stylesheet" href="css/custom.css">
   </head>
   <body>
@@ -185,9 +186,9 @@
                 <span class="badge badge-primary">PostgreSQL</span>
                 <span class="badge badge-primary">Heroku</span>
               </div>
-              <p><a target="_blank" href="https://cs3220.herokuapp.com/">Launch</a></p>
-              <p><small>USERNAME: joe | PASSWORD: password</small></p>
+              <p><a target="_blank" href="https://cs3220.herokuapp.com/">Launch</a> <small>USERNAME: joe | PASSWORD: password</small></p>
               <p><a target="_blank" href="https://github.com/tloula/academic-planning-environment">View GitHub</a></p>
+              <p class="video-link" onclick="openModal();currentSlide(1)">Video Demonstration</p>
             </div>
           </div>
           <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
@@ -221,6 +222,7 @@
                 <span class="badge badge-primary">C++</span>
               </div>
               <p><a target="_blank" href="https://github.com/tloula/digital-logic-simulator">View GitHub</a></p>
+              <p class="video-link" onclick="openModal();currentSlide(2)">Video Demonstration</p>
             </div>
           </div>
           <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
@@ -238,6 +240,7 @@
                 <span class="badge badge-primary">Swing GUI Widget Toolkit</span>
               </div>
               <p><a target="_blank" href="https://github.com/tloula/assembler">View GitHub</a></p>
+              <p class="video-link" onclick="openModal();currentSlide(3)">Video Demonstration</p>
             </div>
           </div>
           <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
@@ -294,6 +297,34 @@
         </div>
         </div>
       </section>
+
+      <!-- Modal/Lightbox -->
+      <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+
+          <div class="mySlides">
+            <div class="numbertext">1 / 3</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/9-8unV0QiQU" frameborder="0" width="560" height="315" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 3</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/NMfea73r5k8" frameborder="0" width="560" height="315" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 3</div>
+            <div class="video-container">
+              <iframe src="https://www.youtube.com/embed/-mNDGOR-bmY" frameborder="0" width="560" height="315" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="ftco-section ftco-counter" id="section-counter">
         <div class="container">
@@ -431,7 +462,8 @@
     <script src="js/google-map.js"></script>
     <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap' async defer></script>
     <script src="js/bing-map.js"></script>
+    <script src="js/lightbox.js"></script>
     <script src="js/main.js"></script>
-    
+
   </body>
 </html>
